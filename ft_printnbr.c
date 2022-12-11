@@ -6,11 +6,11 @@
 /*   By: wfan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 16:46:36 by wfan              #+#    #+#             */
-/*   Updated: 2022/12/11 17:27:10 by wfan             ###   ########.fr       */
+/*   Updated: 2022/12/11 18:59:10 by wfan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_printnbr(int nbr, int *count)
 {

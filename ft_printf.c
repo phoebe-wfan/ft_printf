@@ -6,11 +6,11 @@
 /*   By: wfan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:58:12 by wfan              #+#    #+#             */
-/*   Updated: 2022/12/11 18:35:15 by wfan             ###   ########.fr       */
+/*   Updated: 2022/12/11 19:23:23 by wfan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void	ft_checktype(va_list args, const char type, int *count)
 {
@@ -73,6 +73,19 @@ int	main()
 	i = ft_printf("my str:%p\n",&i);
 	j = printf("origin:%p\n",&i);
 	printf("i = %d, j = %d\n",i,j);
+
+	i = ft_printf("my str:%p\n",(void *)0);
+	j = printf("origin:%p\n", (void *)0);
+	printf("i = %d, j = %d\n",i,j);
+	
+	i = ft_printf("my str:%X\n",-1);
+	j = printf("origin:%X\n", -1);
+	printf("i = %d, j = %d\n",i,j);
+
+	i = ft_printf("my str:%x\n",-1);
+	j = printf("origin:%x\n", -1);
+	printf("i = %d, j = %d\n",i,j);
 	return(0);
 
-}*/
+}
+*/

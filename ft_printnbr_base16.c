@@ -6,11 +6,11 @@
 /*   By: wfan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:15:54 by wfan              #+#    #+#             */
-/*   Updated: 2022/12/11 17:51:57 by wfan             ###   ########.fr       */
+/*   Updated: 2022/12/11 19:22:48 by wfan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_printnbr_base16(unsigned int nbr, char type, int *count)
 {
@@ -21,7 +21,7 @@ void	ft_printnbr_base16(unsigned int nbr, char type, int *count)
 	if (type == 'x')
 		base16 = "0123456789abcdef";
 	else if (type == 'X')
-		base16 = "01234567890ABCDEF";
+		base16 = "0123456789ABCDEF";
 	if (nbr < 16)
 		ft_printchar(base16[nbr2 % 16], count);
 	else

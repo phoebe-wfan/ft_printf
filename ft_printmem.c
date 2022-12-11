@@ -6,11 +6,11 @@
 /*   By: wfan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:04:26 by wfan              #+#    #+#             */
-/*   Updated: 2022/12/11 17:57:37 by wfan             ###   ########.fr       */
+/*   Updated: 2022/12/11 19:12:11 by wfan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void	ft_printbase16x(unsigned long int nbr, int *count)
 {
@@ -30,6 +30,11 @@ void	ft_printmem(const void *ptr, int *count)
 {
 	unsigned long int	adrs;
 
+	if (!ptr)
+	{
+		ft_printstr("(nil)", count);
+		return ;
+	}
 	adrs = (unsigned long int)ptr;
 	ft_printstr("0x", count);
 	ft_printbase16x(adrs, count);
