@@ -6,7 +6,7 @@
 #    By: wfan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 15:27:58 by wfan              #+#    #+#              #
-#    Updated: 2022/12/11 17:47:21 by wfan             ###   ########.fr        #
+#    Updated: 2022/12/11 18:26:39 by wfan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,10 +30,13 @@ all : $(NAME)
 $(NAME): $(OBJ)
 	$(LIBR) $(NAME) $(OBJ)
 
+test: $(OBJ)
+	cc $(OBJ) $(CFLAGS) -o test
+
 clean:
 	$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) test
 
 re: fclean all

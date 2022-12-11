@@ -6,7 +6,7 @@
 /*   By: wfan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:58:12 by wfan              #+#    #+#             */
-/*   Updated: 2022/12/11 18:11:53 by wfan             ###   ########.fr       */
+/*   Updated: 2022/12/11 18:35:15 by wfan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,26 @@ int	ft_printf(const char *type, ...)
 	va_end(args);
 	return (count);
 }
+/*
+
+#include <stdio.h>
+
+int	main()
+{
+	char *a1 = NULL;
+	int	i;
+	int	j;
+	i = ft_printf("my str:%s\n",a1);
+	j = printf("origin:%s\n",a1);
+	printf("i = %d, j = %d\n",i,j);
+
+	i = ft_printf("my str:%d\n",-2147483648);
+	j = printf("origin:%ld\n",-2147483648);
+	printf("i = %d, j = %d\n",i,j);
+
+	i = ft_printf("my str:%p\n",&i);
+	j = printf("origin:%p\n",&i);
+	printf("i = %d, j = %d\n",i,j);
+	return(0);
+
+}*/
